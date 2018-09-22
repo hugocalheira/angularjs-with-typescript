@@ -1,5 +1,24 @@
-<a ui-sref="home">Home</a>
-<a ui-sref="cadastro">Cadastro</a>
-<ui-view>
-    Carregando...
-</ui-view>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <a class="pure-menu-heading" href="#">FCamara</a>
+
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a ui-sref="home" class="pure-menu-link">Home</a></li>
+                <li class="pure-menu-item"><a ui-sref="cadastro" class="pure-menu-link">Cadastro</a></li>                
+            </ul>
+        </div>
+    </div>
+
+    <ui-view>
+        Carregando...
+    </ui-view>
+</div>
+
+<!-- <script src="js/ui.js"></script> -->
