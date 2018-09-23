@@ -1,33 +1,43 @@
-<div id="main">
 
-    <div class="header">
-        <h1>Lista</h1>
-        <h2>A subtitle for your page goes here</h2>
-    </div>
+<div class="header pt-5">
+    <h2>Lista</h2>
+</div>
 
-    <div class="content">
-        
-        <table class="pure-table pure-table-bordered list">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>CPF</th>
-                    <th>Telefone</th>
-                    <th>E-mail</th>
-                    <th></th>
-                </tr>
-            </thead>
-        
-            <tbody>
-                <tr ng-for="cad in lista">
-                    <td>{{ cad.name }}</td>
-                    <td>{{ cad.cpf }}</td>
-                    <td>{{ cad.phone }}</td>
-                    <td>{{ cad.email }}</td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+<div>
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control" id="busca" aria-describedby="busca" placeholder="Encontrar...">
+        </div>
+    </form>
+    
+    <table class="table _table-striped table-borderless">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Nome {{ lista | json }}</th>
+                <th scope="col">Telefone</th>
+                <th scope="col">E-mail</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr ng-repeat="user in $HomeCtrl.lista">
+                <td scope="row">
+                    <div>{{ user.name }}</div>
+                    <small class="text-muted">{{ (user.cpf) ? 'CPF: ' + user.cpf : '' }}</small>
+                </td>
+                <td>{{ user.phone }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    <i class="btn btn-secondary btn-sm fas fa-user-edit" 
+                    ng-click="$HomeCtrl.editUser(user)"></i>
 
-    </div>
+                    <i class="btn btn-danger btn-sm fas fa-user-minus" 
+                    ng-click="$HomeCtrl.removeUser(user)"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a ui-sref="cadastro" class="btn btn-primary btn-lg btn-block">Cadastrar</a>
 </div>

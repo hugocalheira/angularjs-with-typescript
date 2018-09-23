@@ -10,7 +10,7 @@ export class CadastroComponent {
     };
 
     constructor() {
-        console.log('Inicializando cadastro');
+        console.log('cadastro');
     }
  
 }

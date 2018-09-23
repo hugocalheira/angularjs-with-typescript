@@ -1,36 +1,32 @@
+import { User } from '../interfaces/user';
+import { DataService } from '../services/data.service';
+
 export class HomeComponent {
 
-    static componentName  : string = "home";
-    static componentConfig:ng.IComponentOptions = {
+    static componentName: string = "home";
+    static componentConfig: ng.IComponentOptions = {
         bindings: {
         },
         controller: HomeComponent,
         controllerAs: "$HomeCtrl",
         templateUrl: "views/home.component.html"
     };
-    public lista : object[] = [
-        {
-          "name": "My name 1",
-          "cpf": "04080757247",
-          "phone": "11987654321",
-          "email": "myemail1@test.com.br"
-        },
-        {
-          "name": "My name 2",
-          "cpf": "77797584192",
-          "phone": "11987654321",
-          "email": "myemail2@test.com.br"
-        },
-        {
-          "name": "My name 3",
-          "cpf": "45486737688",
-          "phone": "11987654321",
-          "email": "myemail3@test.com.br"
-        }
-    ];
 
-    constructor() {
-        console.log('Inicializando lista');
+    static $inject = ['$scope','DataService'];
+
+    public lista: User[] = [];
+
+    editUser(user:User) {
+        console.log(user);
+    }
+
+    removeUser(user:User) {
+        console.log(user);
+    }
+
+    constructor(private _loadData: DataService) {
+        _loadData = new DataService();
+        this.lista = _loadData.get()
     }
  
 }

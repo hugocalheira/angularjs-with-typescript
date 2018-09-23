@@ -1,3 +1,5 @@
+import { DataService } from '../services/data.service';
+
 export class AppComponent {
 
     static componentName  : string = "app";
@@ -9,8 +11,17 @@ export class AppComponent {
         templateUrl: "views/app.component.html"
     };
 
-    constructor() {
+    static $inject = ['$scope','DataService'];
+
+    constructor(
+        // loadData: DataService
+        ) {
         console.log('Inicializando App');
+        // loadData = new DataService();
+
+        // Grava dados iniciais em localStorage
+        // localStorage.setItem('cadastros', JSON.stringify(loadData.get()));
+        // console.log(JSON.parse(localStorage.getItem('cadastros')))
     }
  
 }

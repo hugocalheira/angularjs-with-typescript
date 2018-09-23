@@ -1,1 +1,47 @@
-this is about
+<div class="header pt-5">
+    <h2>Cadastro</h2>
+</div>
+
+<p class="lead">Lorem ipsum dolor sit amet consectetue prop dominus</p>
+
+<div class="row">
+
+    <div class="col-md-12 order-md-1">
+        <h4 class="mb-3">Dados pessoais</h4>
+        <form class="needs-validation" novalidate>
+            <div class="row">
+                <!-- nome -->
+                <div class="col-md-12 mb-3">
+                    <label for="firstName">Nome</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                    <div class="invalid-feedback">Este campo é obrigatório.</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- cpf -->
+                <div class="col-md-6 mb-3">
+                    <label for="cpf">CPF</label>
+                    <input type="text" class="form-control" id="cpf" placeholder="" value="" required>
+                    <div class="invalid-feedback">Este campo é obrigatório.</div>
+                </div>
+
+                <!-- telefone -->
+                <div class="col-md-6 mb-3">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" class="form-control" id="telefone" placeholder="" value="" required>
+                    <div class="invalid-feedback">Este campo é obrigatório.</div>
+                </div>
+            </div>
+
+            <!-- email -->
+            <div class="mb-3">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="johndoe@example.com" required>
+                <div class="invalid-feedback">Utilize um e-mail válido.</div>
+            </div>
+
+            <button class="btn btn-primary btn-lg btn-block mt-4" type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
