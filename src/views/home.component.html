@@ -6,7 +6,7 @@
 <div>
     <form>
         <div class="form-group">
-            <input type="text" class="form-control" id="busca" aria-describedby="busca" placeholder="Encontrar...">
+            <input type="text" class="form-control" id="busca" aria-describedby="busca" placeholder="Encontrar..." ng-model="busca">
         </div>
     </form>
     
@@ -21,7 +21,7 @@
         </thead>
     
         <tbody>
-            <tr ng-repeat="user in $HomeCtrl.lista">
+            <tr ng-repeat="user in $HomeCtrl.lista | filter:busca">
                 <td scope="row">
                     <div>{{ user.name }}</div>
                     <small class="text-muted">{{ (user.cpf) ? 'CPF: ' + user.cpf : '' }}</small>

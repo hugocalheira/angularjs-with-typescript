@@ -38,7 +38,7 @@ module App {
     .component(CadastroComponent.componentName, CadastroComponent.componentConfig)
     .service('DataService', DataService)
     // .run(['DataService', function(DataService: DataService){
-    //     console.log(DataService.getData());
+    //     console.log(DataService.get());
     // }])
     ;
 }

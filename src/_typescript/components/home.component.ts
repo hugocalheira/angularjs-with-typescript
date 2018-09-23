@@ -12,9 +12,10 @@ export class HomeComponent {
         templateUrl: "views/home.component.html"
     };
 
-    static $inject = ['$scope','DataService'];
+    static $inject = ['$scope'];
 
     public lista: User[] = [];
+    public busca: string = '';
 
     editUser(user:User) {
         console.log(user);
@@ -24,7 +25,9 @@ export class HomeComponent {
         console.log(user);
     }
 
-    constructor(private _loadData: DataService) {
+    constructor(
+        private _loadData: DataService,
+    ) {
         _loadData = new DataService();
         this.lista = _loadData.get()
     }
