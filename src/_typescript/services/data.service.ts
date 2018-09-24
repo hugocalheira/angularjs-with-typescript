@@ -2,9 +2,8 @@ import { User } from '../interfaces/user';
 
 export class DataService {
 
-    // httpService: ng.IHttpService;
+    httpService: ng.IHttpService;
     handlerUrl: string;
-
     
     static $inject = ['$http'];
 
@@ -12,20 +11,14 @@ export class DataService {
         // private $http: ng.IHttpService 
     )
     {
+        // this.httpService = $http;
         this.handlerUrl = 'https://private-f91e8-optimusbrasil.apiary-mock.com/users';
     }
-    
-    // handlerResponded( response: any, params: any ): any
-    // {
-    //     response.data.requestParams = params;
-    //     return response.data;
-    // }
 
     public get(): User[] {
 
         let data: User[] = JSON.parse(localStorage.getItem('cadastros'));
 
-        // console.log(this.httpService);
         // this.httpService.get(this.handlerUrl)
         // .then( ( response: any ) => {
         //     console.log('==>',response)
@@ -38,8 +31,8 @@ export class DataService {
             return data;
         } else {
 
-
-            console.log('Retornando dados de https://private-f91e8-optimusbrasil.apiary-mock.com/users');
+            // carga inicial
+            // https://private-f91e8-optimusbrasil.apiary-mock.com/users'
 
             data = [
                 {
