@@ -13,6 +13,8 @@ export class AppComponent {
 
     static $inject = ['$scope','DataService'];
 
+    public edit: any;
+
     constructor(
         // loadData: DataService
         ) {
