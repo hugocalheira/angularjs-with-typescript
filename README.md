@@ -8,8 +8,13 @@ Sorry, `update` was not implemented, yet.
 Just because!
 
 ## Installation
+First...
 ```bash
-npm install
+sudo npm i --unsafe-perm node-sass
+```
+...then
+```bash
+sudo npm i
 ```
 
 ## Run
