@@ -22,9 +22,9 @@ module App {
                 template: '<home></home>'
             },
             {
-                name: 'cadastro',
-                url: '/cadastro',
-                template: '<cadastro></cadastro>'
+                name: 'register',
+                url: '/register',
+                template: '<register></register>'
             }        
         ];
 

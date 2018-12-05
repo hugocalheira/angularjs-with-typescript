@@ -1,5 +1,5 @@
 <div class="header pt-5">
-    <h2>Cadastro</h2>
+    <h2>Register</h2>
 </div>
 
 <p class="lead">Lorem ipsum dolor sit amet consectetue prop dominus</p>
@@ -7,10 +7,10 @@
 <div class="row">
 
     <div class="col-md-12 order-md-1">
-        <h4 class="mb-3">Dados pessoais</h4>
+        <h4 class="mb-3">User data</h4>
 
         <div class="alert alert-info" role="alert" ng-if="$CadastroCtrl.feedback === 'success'">
-            Cadastro efetuado com sucesso!
+            Register done!
             <button type="button" class="close" aria-label="Close" ng-click='$CadastroCtrl.feedback=""'><span aria-hidden="true">&times;</span></button>
         </div>
 
@@ -18,9 +18,9 @@
             <div class="row">
                 <!-- nome -->
                 <div class="col-md-12 mb-3">
-                    <label for="firstName">Nome</label>
+                    <label for="firstName">Name</label>
                     <input type="text" class="form-control" id="firstName" placeholder="" ng-model="$CadastroCtrl.user.name" required>
-                    <div class="invalid-feedback">Este campo é obrigatório.</div>
+                    <div class="invalid-feedback">This is a required field.</div>
                 </div>
             </div>
 
@@ -29,25 +29,25 @@
                 <div class="col-md-6 mb-3">
                     <label for="cpf">CPF</label>
                     <input type="text" class="form-control" id="cpf" placeholder=""  ng-model="$CadastroCtrl.user.cpf" required>
-                    <div class="invalid-feedback">Este campo é obrigatório.</div>
+                    <div class="invalid-feedback">This is a required field.</div>
                 </div>
 
                 <!-- telefone -->
                 <div class="col-md-6 mb-3">
-                    <label for="telefone">Telefone</label>
+                    <label for="telefone">Phone</label>
                     <input type="text" class="form-control" id="telefone" placeholder=""  ng-model="$CadastroCtrl.user.phone" required>
-                    <div class="invalid-feedback">Este campo é obrigatório.</div>
+                    <div class="invalid-feedback">This is a required field.</div>
                 </div>
             </div>
 
             <!-- email -->
             <div class="mb-3">
-                <label for="email">E-mail</label>
+                <label for="email">Email</label>
                 <input type="email" class="form-control" id="email" placeholder="johndoe@example.com" ng-model="$CadastroCtrl.user.email" required>
-                <div class="invalid-feedback">Utilize um e-mail válido.</div>
+                <div class="invalid-feedback">Use a valid email</div>
             </div>
 
-            <button class="btn btn-primary btn-lg btn-block mt-4 mb-4" type="submit">Enviar</button>
+            <button class="btn btn-primary btn-lg btn-block mt-4 mb-4" type="submit">Send</button>
 
         </form>
     </div>

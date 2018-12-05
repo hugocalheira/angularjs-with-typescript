@@ -3,7 +3,7 @@ import { DataService } from '../services/data.service';
 
 export class CadastroComponent {
 
-    static componentName  : string = "cadastro";
+    static componentName  : string = "register";
     static componentConfig:ng.IComponentOptions = {
         bindings: {
         },
